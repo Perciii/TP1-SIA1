@@ -1,10 +1,10 @@
 package ex4;
 
-public class ColumnRights implements RightsHandler {
+public class Column implements RightsHandler {
 
 	private final String name;
 	
-	public ColumnRights(String n) {
+	public Column(String n) {
 		name = n;
 	}
 	

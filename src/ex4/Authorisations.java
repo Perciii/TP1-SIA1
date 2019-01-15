@@ -3,27 +3,27 @@ package ex4;
 public class Authorisations {
 	private boolean global;
 	private boolean baser;
-	private BaseRights base;
-	private TableRights table;
-	private ColumnRights column;
+	private Base base;
+	private Table table;
+	private Column column;
 	
 	
-	public BaseRights getBase() {
+	public Base getBase() {
 		return base;
 	}
-	public TableRights getTable() {
+	public Table getTable() {
 		return table;
 	}
-	public ColumnRights getColumn() {
+	public Column getColumn() {
 		return column;
 	}
-	public void setBase(BaseRights base) {
+	public void setBase(Base base) {
 		this.base = base;
 	}
-	public void setTable(TableRights table) {
+	public void setTable(Table table) {
 		this.table = table;
 	}
-	public void setColumn(ColumnRights column) {
+	public void setColumn(Column column) {
 		this.column = column;
 	}
 	public boolean isGlobal() {

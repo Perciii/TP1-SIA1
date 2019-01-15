@@ -10,10 +10,10 @@ public class SmallTester {
 
 	@Test
 	public void main() {
-		BaseRights b = new BaseRights("Simple", new ArrayList<TableRights>());
-		TableRights t = new TableRights("Alphabet", new ArrayList<ColumnRights>());
-		ColumnRights c1 = new ColumnRights("A");
-		ColumnRights c2 = new ColumnRights("B");
+		Base b = new Base("Simple", new ArrayList<Table>());
+		Table t = new Table("Alphabet", new ArrayList<Column>());
+		Column c1 = new Column("A");
+		Column c2 = new Column("B");
 		t.addColumns(c1);
 		t.addColumns(c2);
 		b.addTable(t);

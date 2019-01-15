@@ -1,27 +1,27 @@
 package ex4;
 
 public class Query {
-	private BaseRights base;
-	private TableRights table;
-	private ColumnRights column;
+	private Base base;
+	private Table table;
+	private Column column;
 	private Authorisations a;
 	
-	public Query(BaseRights b, TableRights t, ColumnRights c, User u) {
+	public Query(Base b, Table t, Column c, User u) {
 		base = b;
 		table = t;
 		column = c;
 		a = u.getRights();
 	}
 
-	public BaseRights getBase() {
+	public Base getBase() {
 		return base;
 	}
 
-	public TableRights getTable() {
+	public Table getTable() {
 		return table;
 	}
 
-	public ColumnRights getColumn() {
+	public Column getColumn() {
 		return column;
 	}
 	

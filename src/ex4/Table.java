@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class TableRights implements RightsHandler {
+public class Table implements RightsHandler {
 	private final String name;
-	private List<ColumnRights> columns;
+	private List<Column> columns;
 	
-	public TableRights(String n, ArrayList<ColumnRights> a) {
+	public Table(String n, ArrayList<Column> a) {
 		Objects.requireNonNull(a);
 		name = n;
 		columns = a;
 	}
 	
-	public void addColumns(ColumnRights c) {
+	public void addColumns(Column c) {
 		columns.add(c);
 	}
 	

@@ -4,21 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class BaseRights implements RightsHandler{
+public class Base implements RightsHandler{
 	private final String name;
-	private List<TableRights> tables = new ArrayList<>();
+	private List<Table> tables = new ArrayList<>();
 	
-	public BaseRights(String n, ArrayList<TableRights> t) {
+	public Base(String n, ArrayList<Table> t) {
 		Objects.requireNonNull(t);
 		name = n;
 		tables = t;
 	}
 	
-	public List<TableRights> getTables() {
+	public List<Table> getTables() {
 		return tables;
 	}
 	
-	public void addTable(TableRights t) {
+	public void addTable(Table t) {
 		Objects.requireNonNull(t);
 		tables.add(t);
 	}
