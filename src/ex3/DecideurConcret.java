@@ -1,5 +1,7 @@
 package ex3;
 
+import java.util.Objects;
+
 public class DecideurConcret implements Decideur {
 
 	private DecideurConcret superieur;
@@ -10,6 +12,7 @@ public class DecideurConcret implements Decideur {
 	}
 	
 	public DecideurConcret(int p, DecideurConcret s) {
+		Objects.requireNonNull(s);
 		plafond = p;
 		superieur = s;
 	}

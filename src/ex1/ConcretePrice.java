@@ -2,6 +2,7 @@ package ex1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ConcretePrice implements PriceObservable{
 
@@ -14,11 +15,13 @@ public class ConcretePrice implements PriceObservable{
 	
 	@Override
 	public void attach(Observer o) {
+		Objects.requireNonNull(o);
 		observers.add(o);
 	}
 
 	@Override
 	public void detach(Observer o) {
+		Objects.requireNonNull(o);
 		observers.remove(o);
 	}
 
