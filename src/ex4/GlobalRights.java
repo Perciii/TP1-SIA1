@@ -6,7 +6,7 @@ public class GlobalRights implements RightsHandler {
 		if(q.getA().isGlobal()) {
 			return true;
 		}
-		return BaseRights.checkRights(q);
+		return q.getBase().checkRights(q);
 	}
 
 

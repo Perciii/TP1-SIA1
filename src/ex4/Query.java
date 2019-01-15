@@ -1,40 +1,28 @@
 package ex4;
 
 public class Query {
-	private String base;
-	private String table;
-	private String column;
+	private BaseRights base;
+	private TableRights table;
+	private ColumnRights column;
 	private Authorisations a;
 	
-	public Query(String b, String t, String c, User u) {
+	public Query(BaseRights b, TableRights t, ColumnRights c, User u) {
 		base = b;
 		table = t;
 		column = c;
 		a = u.getRights();
 	}
 
-	public String getBase() {
+	public BaseRights getBase() {
 		return base;
 	}
 
-	public String getTable() {
+	public TableRights getTable() {
 		return table;
 	}
 
-	public String getColumn() {
+	public ColumnRights getColumn() {
 		return column;
-	}
-
-	public void setBase(String base) {
-		this.base = base;
-	}
-
-	public void setTable(String table) {
-		this.table = table;
-	}
-
-	public void setColumn(String column) {
-		this.column = column;
 	}
 	
 	public Authorisations getA() {

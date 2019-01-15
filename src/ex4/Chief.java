@@ -3,8 +3,11 @@ package ex4;
 public class Chief implements User{
 	private Authorisations rights;
 	
-	public Chief(Authorisations b) {
-		rights = b;
+	public Chief(BaseRights b) {
+		Authorisations r = new Authorisations();
+		r.setBaser(true);
+		r.setBase(b);
+		rights = r;
 	}
 	
 	@Override

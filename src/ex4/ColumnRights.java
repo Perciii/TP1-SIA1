@@ -1,10 +1,19 @@
 package ex4;
 
 public class ColumnRights implements RightsHandler {
-	private static String column = "c";
+
+	private final String name;
 	
-	public static boolean checkRights(Query q) {
-		if(q.getA().getColumn() == column) {
+	public ColumnRights(String n) {
+		name = n;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public boolean checkRights(Query q) {
+		if(q.getA().getColumn().getName() == this.name) {
 			return true;
 		}
 		return false;

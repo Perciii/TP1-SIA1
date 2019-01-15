@@ -3,7 +3,11 @@ package ex4;
 public class Client implements User {
 	private Authorisations rights;
 	
-	public Client(Authorisations cr) {
+	public Client(BaseRights b, TableRights t, ColumnRights c) {
+		Authorisations cr = new Authorisations();
+		cr.setBase(b);
+		cr.setTable(t);
+		cr.setColumn(c);
 		rights = cr;
 	}
 	
