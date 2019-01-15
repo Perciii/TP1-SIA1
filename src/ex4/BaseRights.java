@@ -1,14 +1,16 @@
 package ex4;
 
-public class BaseRights extends GlobalRights {
-	private String base;
-	
-	public String getBase() {
-		return base;
-	}
-	
-	public void setBase(String base) {
-		this.base = base;
-	}
+public class BaseRights implements RightsHandler{
+	private static String base = "b";
 
+	public static boolean checkRights(Query q) {
+		if(q.getA().isBaser()) {
+			return true;
+		}
+		if(q.getA().getBase() == base) {
+			return TableRights.checkRights(q);
+		}
+		return false;
+	}
+	
 }

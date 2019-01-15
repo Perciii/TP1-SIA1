@@ -1,14 +1,14 @@
 package ex4;
 
 public class Admin implements User {
-	private GlobalRights rights;
+	private Authorisations rights;
 	
-	public Admin(GlobalRights r) {
+	public Admin(Authorisations r) {
 		rights = r;
 	}
 	
 	@Override
-	public Rights getRights() {
-		return (Rights) rights;
+	public Authorisations getRights() {
+		return (Authorisations) rights;
 	}
 }

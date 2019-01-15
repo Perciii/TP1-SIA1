@@ -1,14 +1,14 @@
 package ex4;
 
 public class Chief implements User{
-	private BaseRights rights;
+	private Authorisations rights;
 	
-	public Chief(BaseRights b) {
+	public Chief(Authorisations b) {
 		rights = b;
 	}
 	
 	@Override
-	public Rights getRights() {
-		return (Rights) rights;
+	public Authorisations getRights() {
+		return (Authorisations) rights;
 	}
 }

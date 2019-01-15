@@ -1,14 +1,14 @@
 package ex4;
 
 public class Client implements User {
-	private ColumnRights rights;
+	private Authorisations rights;
 	
-	public Client(ColumnRights cr) {
+	public Client(Authorisations cr) {
 		rights = cr;
 	}
 	
 	@Override
-	public Rights getRights() {
-		return (Rights) rights;
+	public Authorisations getRights() {
+		return (Authorisations) rights;
 	}
 }
